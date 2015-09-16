@@ -1,0 +1,27 @@
+﻿<Window x:Class="ssvep.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SSVEP" Height="254" Width="312" ResizeMode="NoResize">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Period Length"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Name="txtPeriod" Width="100" Height="25" Text="2" HorizontalContentAlignment="Center" />
+
+        <Label Grid.Row="1" Grid.Column="0" Content="Color"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Name="txtColor" Width="100" Height="25" Text="#00000000" HorizontalContentAlignment="Center"/>
+
+
+        <Button Grid.Row="2" Grid.Column="0" Width="100" Height="100" Content="Make" Click="makeButton_Click"/>
+        <Button Grid.Row="2" Grid.Column="1" Width="100" Height="100" Content="Clear" Click="clearButton_Click"/>
+    </Grid>
+</Window>
