@@ -1,0 +1,7 @@
+*.exe
+*.csproj
+*.sln
+*.suo
+build/*
+ssvep/bin/*
+ssvep/obj/*
