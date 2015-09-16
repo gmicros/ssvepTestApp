@@ -14,6 +14,7 @@ namespace ssvep
         private int cntr = 0;
         private int length = 2;
         private Brush color;
+        DispatcherTimer timer = new DispatcherTimer();
         public blinkingWindow(int num, string hexColor)
         {
             InitializeComponent();
@@ -24,11 +25,17 @@ namespace ssvep
             this.Background = brush;
             this.Title = num.ToString() + ", " + hexColor;
             Loaded += new RoutedEventHandler(blinkingWindow_Loaded);
+            Closed += new EventHandler(blinkingWindow_Closed);
+        }
+
+        void blinkingWindow_Closed(object sender, EventArgs e)
+        {
+            timer.Stop();
         }
 
         void blinkingWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            DispatcherTimer timer = new DispatcherTimer();
+            
             timer.Interval = new TimeSpan(0, 0, 0, 0, 17);
             timer.Tick += new EventHandler(timer_Tick);
             timer.Start();
