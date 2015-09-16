@@ -3,7 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="blinkingWindow" Height="300" Width="300"
         Background="Black">
-    <Grid>
+    <StackPanel>
+        <Label Name="txtCntr" Height="30" Width="30" HorizontalAlignment="Left"/>
+        <!--
         <ComboBox Visibility="Collapsed"
 	    HorizontalAlignment="Left"
 	    Margin="10,10,0,0"
@@ -11,5 +13,6 @@
 	    Width="120"
 	    Loaded="ComboBox_Loaded"
 	    SelectionChanged="ComboBox_SelectionChanged"/>    
-    </Grid>
+        -->
+    </StackPanel>
 </Window>

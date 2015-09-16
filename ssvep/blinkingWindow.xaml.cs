@@ -43,14 +43,18 @@ namespace ssvep
 
         void timer_Tick(object sender, EventArgs e)
         {
+            this.txtCntr.Content = (cntr % length).ToString();
             if (cntr % length >= length/2)
-            {
+            {                
                 this.Background = Brushes.White;
+                this.txtCntr.Foreground = Brushes.Black;
             }
             else
             {
                 this.Background = color;
+                this.txtCntr.Foreground = Brushes.White;
             }
+            
             cntr++;
         }
 
