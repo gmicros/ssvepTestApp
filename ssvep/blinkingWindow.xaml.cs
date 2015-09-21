@@ -13,17 +13,26 @@ namespace ssvep
     {
         private int cntr = 0;
         private int length = 2;
-        private Brush color;
+        private Brush color1;
+        private Brush color2;
         DispatcherTimer timer = new DispatcherTimer();
-        public blinkingWindow(int num, string hexColor)
+        public blinkingWindow(int num, string hexColor1, string hexColor2)
         {
             InitializeComponent();
             this.length = num;
+            
+            // set brush colors 
             var converter = new System.Windows.Media.BrushConverter();
-            var brush = (Brush)converter.ConvertFromString(hexColor);
-            this.color = brush;
-            this.Background = brush;
-            this.Title = num.ToString() + ", " + hexColor;
+            var brush = (Brush)converter.ConvertFromString(hexColor1);
+            this.color1 = brush;
+
+            converter = new System.Windows.Media.BrushConverter();
+            brush = (Brush)converter.ConvertFromString(hexColor2);
+            this.color2 = brush;
+
+
+            this.Background = color1;
+            this.Title = num.ToString() + ", " + hexColor1 + ", " + hexColor2;
             Loaded += new RoutedEventHandler(blinkingWindow_Loaded);
             Closed += new EventHandler(blinkingWindow_Closed);
         }
@@ -46,12 +55,12 @@ namespace ssvep
             this.txtCntr.Content = (cntr % length).ToString();
             if (cntr % length >= length/2)
             {                
-                this.Background = Brushes.White;
+                this.Background = color2;
                 this.txtCntr.Foreground = Brushes.Black;
             }
             else
             {
-                this.Background = color;
+                this.Background = color1;
                 this.txtCntr.Foreground = Brushes.White;
             }
             

@@ -20,7 +20,7 @@ namespace ssvep
             Int32.TryParse(txtPeriod.Text, out periodNum);
             if (periodNum >= 2 && periodNum <= 6)
             {
-                var temp = new blinkingWindow(periodNum, txtColor.Text);
+                var temp = new blinkingWindow(periodNum, txtColor1.Text, txtColor2.Text);
                 temp.Show();
                 windows.Add(temp);
             }

@@ -7,6 +7,7 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"/>
@@ -17,11 +18,13 @@
         <Label Grid.Row="0" Grid.Column="0" Content="Period Length"/>
         <TextBox Grid.Row="0" Grid.Column="1" Name="txtPeriod" Width="100" Height="25" Text="2" HorizontalContentAlignment="Center" />
 
-        <Label Grid.Row="1" Grid.Column="0" Content="Color"/>
-        <TextBox Grid.Row="1" Grid.Column="1" Name="txtColor" Width="100" Height="25" Text="#00000000" HorizontalContentAlignment="Center"/>
+        <Label Grid.Row="1" Grid.Column="0" Content="Color1"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Name="txtColor1" Width="100" Height="25" Text="#000000" HorizontalContentAlignment="Center"/>
 
+        <Label Grid.Row="2" Grid.Column="0" Content="Color2"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Name="txtColor2" Width="100" Height="25" Text="#FFFFFF" HorizontalContentAlignment="Center"/>
 
-        <Button Grid.Row="2" Grid.Column="0" Width="100" Height="100" Content="Make" Click="makeButton_Click"/>
-        <Button Grid.Row="2" Grid.Column="1" Width="100" Height="100" Content="Clear" Click="clearButton_Click"/>
+        <Button Grid.Row="3" Grid.Column="0" Width="100" Height="100" Content="Make" Click="makeButton_Click"/>
+        <Button Grid.Row="3" Grid.Column="1" Width="100" Height="100" Content="Clear" Click="clearButton_Click"/>
     </Grid>
 </Window>
